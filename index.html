@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation App</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-amber-100 text-black sticky top-0 mb-8">
+        <button id="blogBtn" onclick="location.href='blog.html'" class="btn bg-lime-500 px-4">Blog</button>
+        <div class="flex gap-2 items-center">
+          <img src="donate 1.png" alt=""> 
+          <div class="flex-1 text-center text-2xl font-bold">Donate Bangladesh</div> 
+        </div>
+        <div class="flex items-center gap-2">
+            <img src="assets/coin.png" alt="">
+            <span class="mr-2 font-bold text-lg"><span id="balance"></span> BDT</span>
+        </div>
+    </nav>
+    <div class="flex justify-center gap-4">
+<button class="btn bg-lime-500" id="donationBtn">Donation</button>
+        <button class="text-black btn bg-lime-500" id="historyBtn">History</button>
+    </div>
+    <div class="divider"></div>
+    
+     <!-- Donation Section -->
+    <div id="donationSection" class="p-4">
+        <!-- Donation section 1 -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-4 flex">
+            <img src="assets/noakhali.png" alt="Donation Image" class="w-full lg:w-1/2 h-auto">
+            <div class="ml-4 flex-1">
+                <div class="flex items-center gap-2 mt-16 mb-8">
+                    <img src="assets/coin.png" alt="">
+                </div>
+                <p>Current Amount: $<span class="current-amount">0</span></p>
+                <h3 class="text-lg font-semibold mb-8">Donate for Flood at Noakhali, Bangladesh</h3>
+                <p class="mb-16"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                
+                <input type="number" class="border p-2 mt-2 w-full" placeholder="Amount to donate" min="1">
+                <button class="donate-btn bg-lime-500 text-black mt-2 px-4 py-2 rounded">Donate Now</button>
+            </div>
+        </div>
+        <!-- Donation Section 2 -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-4 flex">
+            <img src="assets/feni.png" alt="Donation Image" class="w-full lg:w-1/2 h-auto">
+            <div class="ml-4 flex-1">
+<div class="flex items-center gap-2 mt-16 mb-8">
+    <img src="assets/coin.png" alt="">
+    <p>Current Amount: $<span class="current-amount">0</span></p>
+</div>
+                <h3 class="text-lg font-semibold mb-8">Donate for Flood Relief in Feni,Bangladesh</h3>
+                <p class="mb-16">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                
+                <input type="number" class="border p-2 mt-2 w-full" placeholder="Amount to donate" min="1">
+                <button class="donate-btn bg-lime-500 text-black mt-2 px-4 py-2 rounded">Donate Now</button>
+            </div>
+        </div>
+        <!-- Donation Section 3 -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-4 flex">
+            <img src="assets/quota-protest.png" alt="Donation Image" class="w-full lg:w-1/2 h-auto">
+            <div class="ml-4 flex-1">
+                <div class="flex items-center gap-2 mt-16 mb-8">
+                    <img src="assets/coin.png" alt="">
+                    <p>Current Amount: $<span class="current-amount">0</span></p>
+                </div>
+                <h3 class="text-lg font-semibold mb-8">Aid for Injured in the Quota Movement</h3>
+                <p class="mb-16">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                
+                <input type="number" class="border p-2 mt-2 w-full" placeholder="Amount to donate" min="1">
+                <button class="donate-btn bg-lime-500 text-black mt-2 px-4 py-2 rounded">Donate Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- History Section -->
+    <div id="historySection" class="hidden p-4">
+        <h2 class="text-xl font-semibold">Donation History</h2>
+        <ul id="historyList" class="mt-2"></ul>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-4">
+            <p>Donation successful!</p>
+            <button id="closeModal" class="bg-blue-500 text-white mt-2 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
